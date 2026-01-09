@@ -1,2 +1,3 @@
-Hello Glory!
-This is a sample text file for Docker testing.
+# requirements.txt
+# No dependencies needed
+
