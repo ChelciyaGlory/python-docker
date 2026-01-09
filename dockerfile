@@ -1,19 +1,18 @@
-# Base image
-FROM python:3.12-slim
+# Use official Python image
+FROM python:3.11-slim
 
-# Set working directory
+# Set working directory in container
 WORKDIR /app
 
-# Copy requirements and install packages
+# Copy requirements file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the app code
+# Copy app code
 COPY app.py .
 
-# Expose port
+# Expose port (optional, useful for Flask)
 EXPOSE 5000
 
-# Run the app
+# Command to run the app
 CMD ["python", "app.py"]
-
